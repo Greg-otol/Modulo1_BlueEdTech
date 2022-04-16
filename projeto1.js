@@ -1,8 +1,6 @@
 const prompt = require("prompt-sync")();
 
-function lineSpace() {
-  let line = "―";
-  console.log(line.repeat(106));
+function space() {
   console.log();
 }
 
@@ -14,30 +12,37 @@ Ao fim de mais um dia de trabalho exaustivo,
     e desenvolver seu primeiro projeto.
 `);
 
-lineSpace();
+space();
 
-let question1 = "Vamos ajudar o Bluemer a desenvolver seu primeiro projeto? S/N: ";
-let question2 = "Você pode ajudar o Bluemer a criar uma história? S/N: ";
-let question3 = "Vamos ajudar o Bluemer a pensar em cinco perguntas? S/N: ";
-let question4 = "Você consegue ajudar o Bluemer a somar as repostas positivas? S/N: ";
-let question5 = "Vamos ajudar o Bluemer a criar cinco respostas? S/N: ";
+console.log(`Responda com 'S' ou 'N'!`);
 
-let questions = [question1, question2, question3, question4, question5];
+space();
+
+let questions = [
+  "Vamos ajudar o Bluemer a desenvolver seu primeiro projeto? S/N: ",
+  "Você pode ajudar o Bluemer a criar uma história? S/N: ",
+  "Vamos ajudar o Bluemer a pensar em cinco perguntas? S/N: ",
+  "Você consegue ajudar o Bluemer a somar as repostas positivas? S/N: ",
+  "Vamos ajudar o Bluemer a criar cinco respostas? S/N: ",
+];
 
 let answers = [];
 
 for (i = 0; i < questions.length; i++) {
   while (true) {
+    space();
     answers[i] = prompt(questions[i]).toUpperCase();
     if (answers[i] !== "S" && answers[i] !== "N") {
-      console.log("Resposta inválida, responda S ou N.");
+      console.log(
+        `'${answers[i]}' é uma resposta inválida, responda 'S' ou 'N'!`
+      );
     } else {
       break;
     }
   }
 }
 
-lineSpace();
+space();
 
 const yes = "S";
 let sumYes = 0;
