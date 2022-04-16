@@ -16,20 +16,20 @@ Ao fim de mais um dia de trabalho exaustivo,
 
 lineSpace();
 
-let perg1 = "Vamos ajudar o Bluemer a desenvolver seu primeiro projeto? S/N: ";
-let perg2 = "Você pode ajudar o Bluemer a criar uma história? S/N: ";
-let perg3 = "Vamos ajudar o Bluemer a pensar em cinco perguntas? S/N: ";
-let perg4 = "Você consegue ajudar o Bluemer a somar as repostas positivas? S/N: ";
-let perg5 = "Vamos ajudar o Bluemer a criar cinco respostas? S/N: ";
+let question1 = "Vamos ajudar o Bluemer a desenvolver seu primeiro projeto? S/N: ";
+let question2 = "Você pode ajudar o Bluemer a criar uma história? S/N: ";
+let question3 = "Vamos ajudar o Bluemer a pensar em cinco perguntas? S/N: ";
+let question4 = "Você consegue ajudar o Bluemer a somar as repostas positivas? S/N: ";
+let question5 = "Vamos ajudar o Bluemer a criar cinco respostas? S/N: ";
 
-let perguntas = [perg1, perg2, perg3, perg4, perg5];
+let questions = [question1, question2, question3, question4, question5];
 
-let respostas = [];
+let answers = [];
 
-for (i = 0; i <= 4; i++) {
+for (i = 0; i < questions.length; i++) {
   while (true) {
-    respostas[i] = prompt(perguntas[i]).toUpperCase();
-    if (respostas[i] !== "S" && respostas[i] !== "N") {
+    answers[i] = prompt(questions[i]).toUpperCase();
+    if (answers[i] !== "S" && answers[i] !== "N") {
       console.log("Resposta inválida, responda S ou N.");
     } else {
       break;
@@ -42,8 +42,8 @@ lineSpace();
 const yes = "S";
 let sumYes = 0;
 
-for (let i = 0; i < respostas.length; i++) {
-  if (respostas[i] === yes) {
+for (let i = 0; i < answers.length; i++) {
+  if (answers[i] === yes) {
     sumYes++;
   }
 }
