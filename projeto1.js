@@ -10,35 +10,40 @@ console.log(`
            Bluemer e o Projeto 1
 
 Ao fim de mais um dia de trabalho exaustivo,
- Bluemer sai as pressas pra chegar em casa
+ Bluemer sai as pressas para chegar em casa
     e desenvolver seu primeiro projeto.
 `);
 
 lineSpace();
 
-const questions = [
-  prompt(
-    "Vamos ajudar o Bluemer a desenvolver seu primeiro projeto? S/N: "
-  ).toUpperCase(),
-  prompt(
-    "Você pode ajudar o Bluemer a criar uma história? S/N: "
-  ).toUpperCase(),
-  prompt(
-    "Vamos ajudar o Bluemer a pensar em cinco perguntas? S/N: "
-  ).toUpperCase(),
-  prompt(
-    "Você consegue ajudar o Bluemer a somar as repostas positivas? S/N: "
-  ).toUpperCase(),
-  prompt("Vamos ajudar o Bluemer a criar cinco respostas? S/N: ").toUpperCase(),
-];
+let perg1 = "Vamos ajudar o Bluemer a desenvolver seu primeiro projeto? S/N: ";
+let perg2 = "Você pode ajudar o Bluemer a criar uma história? S/N: ";
+let perg3 = "Vamos ajudar o Bluemer a pensar em cinco perguntas? S/N: ";
+let perg4 = "Você consegue ajudar o Bluemer a somar as repostas positivas? S/N: ";
+let perg5 = "Vamos ajudar o Bluemer a criar cinco respostas? S/N: ";
+
+let perguntas = [perg1, perg2, perg3, perg4, perg5];
+
+let respostas = [];
+
+for (i = 0; i <= 4; i++) {
+  while (true) {
+    respostas[i] = prompt(perguntas[i]).toUpperCase();
+    if (respostas[i] !== "S" && respostas[i] !== "N") {
+      console.log("Resposta inválida, responda S ou N.");
+    } else {
+      break;
+    }
+  }
+}
 
 lineSpace();
 
 const yes = "S";
 let sumYes = 0;
 
-for (let i = 0; i < questions.length; i++) {
-  if (questions[i] === yes) {
+for (let i = 0; i < respostas.length; i++) {
+  if (respostas[i] === yes) {
     sumYes++;
   }
 }
