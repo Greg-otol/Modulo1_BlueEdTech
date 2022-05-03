@@ -1,6 +1,5 @@
-# projeto1
-Módulo 1 - projeto1 do curso Blue 
+# Módulo 1 - BlueEdTech
 
-Para executar o projeto no VScode, instale a dependências que está no package.json.
+Para executar o projeto no VScode, instale a dependência que está no package.json.
 
 npm install prompt-sync
